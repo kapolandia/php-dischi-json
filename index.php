@@ -20,10 +20,15 @@
         </header>
         <main>
             <div class="container p-5">
-                <div v-for="disc in cards" class="card" style="width: 18rem;">
+                <div class="row d-flex justify-content-center">
+                <div v-for="disc in cards" class="card col-4 m-3" >
+                    <img :src="disc.poster" alt="">
                     <div class="card-body">
-                        <p class="card-text">{{disc.title}}</p>
+                        <h5 class="card-title">{{disc.title}}</h5>
+                        <p class="card-text fw-bold">{{disc.author}}</p>
+                        <p class="card-text">{{disc.year}}</p>
                     </div>
+                </div>
                 </div>
             </div>
         </main>

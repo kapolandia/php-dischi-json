@@ -9,14 +9,15 @@ createApp({
   },
   methods: {
     diskApiCall() {
-        axios.get('server.php', {})
-          .then(function (response) {
+        axios.get("server.php", {})
+          .then( (response) => {
             this.cards = response.data;
             console.log(this.cards);
           })
+        }
+    },
+    mounted() {
+        this.diskApiCall()
     }
-  },
-  mounted() {
-    this.diskApiCall()
-  }
 }).mount('#app')
+
